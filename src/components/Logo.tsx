@@ -22,17 +22,29 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* JUSTERA text */}
+      {/* Правовой щит text */}
       <text
         x="38"
-        y="27"
+        y="16"
         fontFamily="monospace"
-        fontSize="18"
-        fontWeight="600"
+        fontSize="11"
+        fontWeight="700"
         fill="white"
-        letterSpacing="1"
+        letterSpacing="2"
       >
-        JUSTERA
+        ПРАВОВОЙ
+      </text>
+      <text
+        x="38"
+        y="30"
+        fontFamily="monospace"
+        fontSize="11"
+        fontWeight="400"
+        fill="white"
+        opacity="0.7"
+        letterSpacing="3"
+      >
+        ЩИТ
       </text>
     </svg>
   );

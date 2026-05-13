@@ -1,0 +1,33 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST valid request",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Тестов",
+        "phone": "+79001234567",
+        "amount": "50000",
+        "description": "Меня обманули мошенники на сумму 50000 рублей через интернет-магазин."
+      },
+      "expectedStatus": 200,
+      "expectedBody": { "ok": true },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST missing required fields",
+      "method": "POST",
+      "path": "/",
+      "body": { "name": "Иван" },
+      "expectedStatus": 400,
+      "expectedBody": { "error": "Заполните обязательные поля: name, phone, description" },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
