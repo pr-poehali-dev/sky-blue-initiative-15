@@ -12,7 +12,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
 
   const menuItems = [
     { name: "Пострадавшим", href: "#victims" },
-    { name: "Юристам", href: "#lawyers" },
+    { name: "Виды мошенничества", href: "/vidy-moshennichestva" },
     { name: "Как это работает", href: "#how" },
     { name: "Контакты", href: "#contact" },
   ];
